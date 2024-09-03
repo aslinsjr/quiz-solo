@@ -28,7 +28,7 @@ body {
 
 .app {
     width: 400px;
-    height: 80vh;
+    height: 85vh;
     background-color: var(--background-app);
     box-shadow: 1px 1px 1rem 1px var(--background-app);
     border-radius: 1rem;
@@ -91,7 +91,6 @@ header h2 {
     opacity: 0.8;
     cursor: pointer;
     transition: 0.5s;
-    animation: pulse 3s infinite;
 }
 
 .button:hover {
@@ -167,6 +166,7 @@ header h2 {
 
 #reload-btn {
     margin: 3rem 0;
+    animation: pulse 3s infinite;
 }
 
 .hide {
