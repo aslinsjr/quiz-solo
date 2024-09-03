@@ -23,13 +23,13 @@ body {
     height: 100vh;
     background-image: var(--background-gradient);
     position: relative;
+    color: var(--text-color);
 }
 
 .app {
     width: 400px;
     height: 80vh;
     background-color: var(--background-app);
-    color: var(--text-color);
     box-shadow: 1px 1px 1rem 1px var(--background-app);
     border-radius: 1rem;
 }
@@ -79,7 +79,7 @@ header h2 {
     padding: 0 1rem;
 }
 
-#start-btn {
+.button {
     padding: 1rem 3.5rem;
     font-size: 2rem;
     border-radius: 1rem;
@@ -93,7 +93,7 @@ header h2 {
     transition: 0.5s;
 }
 
-#start-btn:hover {
+.button:hover {
     opacity: 1;
     transform: scale(1.05);
 }
@@ -132,15 +132,36 @@ header h2 {
 }
 
 .modal {
+    width: 350px;
     background-color: var(--background-app);
     flex-direction: column;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2rem 0;
     gap: 1rem;
     position: absolute;
     top: calc(50vh - 70px);
     animation: dropDown 0.5s;
     transition: 0.5s;
+    box-shadow: 1px 1px 1rem 1px var(--text-color);
+}
+
+#next-btn {
+    font-size: 1rem;
+}
+
+#resposta {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+#score {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+#reload-btn {
+    margin: 3rem 0;
 }
 
 .hide {

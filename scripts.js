@@ -73,12 +73,13 @@ function getAnswer(randomArray, index) {
             e.preventDefault()
 
             if (e.target.innerHTML[0] === randomArray[index].resposta) {
-                respostaSpan.innerHTML = "acertou"
+                respostaSpan.innerHTML = "Resposta certa"
 
                 score = score + 1
 
             }else {
-                respostaSpan.innerHTML = "errou"
+                respostaSpan.innerHTML = `Resposta errada,
+                a resposta certa é a letra "${randomArray[index].resposta}"`
             }
 
             modalBg.classList.remove("hide")
@@ -91,8 +92,9 @@ function getAnswer(randomArray, index) {
 
                 if(index == 10) {
                     appContainer.innerHTML = `
-                    <h2>Você acertou ${score} questões</h2>
-                    <button id="reload-btn">Voltar</button>
+                    <h2>Você acertou</h2>
+                    <span id="score">${score} questões</span>
+                    <button class="button" id="reload-btn">Voltar</button>
                     `
                     const reloadBtn = document.querySelector("#reload-btn")
                     
