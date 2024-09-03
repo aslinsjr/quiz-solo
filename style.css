@@ -91,6 +91,7 @@ header h2 {
     opacity: 0.8;
     cursor: pointer;
     transition: 0.5s;
+    animation: pulse 3s infinite;
 }
 
 .button:hover {
@@ -147,6 +148,10 @@ header h2 {
 
 #next-btn {
     font-size: 1rem;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: none;
+    animation: none;
 }
 
 #resposta {
@@ -175,5 +180,22 @@ header h2 {
 
     to {
         top: calc(50vh - 70px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.8;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: scale(0.9);
     }
 }
